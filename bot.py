@@ -25,7 +25,7 @@ def send_message(time_out):
     while True:
         if time.time() - last_time > time_out:
 
-            file = open("../bot_for_admins/id.txt", "r")
+            file = open("id.txt", "r")
             chat_id = file.read()
             file.close()
             orders = requests.get("https://hookah-batumi.herokuapp.com/set_orders/5000").json()
