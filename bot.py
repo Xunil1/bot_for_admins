@@ -28,7 +28,7 @@ def send_message(time_out):
             file = open("id.txt", "r")
             chat_id = file.read()
             file.close()
-            orders = requests.get("https://hookah-batumi.herokuapp.com/set_orders/5000").json()
+            orders = requests.get("https://hookah-batumi.herokuapp.com/set_orders/20").json()
             if orders:
                 for el in orders:
                     message = "Номер заказа: #" + str(orders[el]["id"]) + "\nЗаказ: " + str(orders[el]["order_el"]) + "\nИмя: " + str(orders[el]["name"]) + "\nАдрес: " + str(orders[el]["address"]) + "\nТелефон: " + str(orders[el]["phone"]) + "\nМессенджер: " + str(orders[el]["messenger"]) + "\nКомментарий: " + str(orders[el]["comment"]) + "\nОбщая стоимость: " + str(orders[el]["order_price"])
