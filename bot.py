@@ -16,7 +16,7 @@ def welcome(message):
 
 
 @bot.message_handler(commands=['start_send_order'])
-def start_send_order():
+def start_send_order(message):
     send_message(20)
 
 
